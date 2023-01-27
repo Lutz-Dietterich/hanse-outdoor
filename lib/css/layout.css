@@ -1,0 +1,177 @@
+/* =================================
+
+layout.css
+
+- Gestaltung der Layoutbereiche
+- Hauptnavigation in eigenem Stylesheet
+- Elemente im Inhaltsbereich in content.css
+
+================================== */
+
+@media screen {
+  body {
+    background-color: #f5f5f3;
+    overflow-x: hidden;
+  }
+
+  /**
+  * Kopfbetreich
+  */
+
+  .site-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    left: 10%;
+    margin-bottom: 100px;
+  }
+
+  /* Abstände Logo und Slogan anpassen */
+
+  .site-logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-top: 12rem;
+    margin: auto;
+    width: 70%;
+  }
+
+  .site-logo img {
+    /* width: 26%; */
+    min-width: 300px;
+    height: auto;
+    z-index: 50;
+  }
+
+  .header-hintergrund {
+    margin-top: -2.5rem;
+    width: 100%;
+    height: auto;
+    min-width: 900px;
+  }
+
+  /* Impressum */
+
+  .recht,
+  h1 {
+    margin-top: 450px;
+    position: relative;
+    border-bottom: #333 double;
+    z-index: 2;
+  }
+
+  /**
+  * Inhaltsbereich
+  */
+
+  /* Zeilenabstand auf das anderthalbfache der Schriftgröße */
+  .site-content {
+    line-height: 1.5;
+  }
+
+  .wrapper-recht {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 30px 50px;
+    background-color: rgba(182, 181, 181, 0.702);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgb(51 51 51 / 30%);
+    text-align: center;
+  }
+
+  /**
+  * Fußbereich
+  */
+
+  .site-footer {
+    background-color: #333;
+    opacity: 0.7;
+    padding: 1%;
+    text-align: right;
+    font-size: 1.5rem;
+  }
+
+  .site-footer a {
+    color: black;
+    text-decoration: none;
+    font-size: smaller;
+  }
+
+  .footer-nav ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-nav li {
+    margin-right: 0.5rem;
+  }
+
+  .footer-nav li:first-child {
+    border-right: 1px solid white;
+    padding-right: 0.5rem;
+  }
+
+  /* .oben {
+    position: sticky;
+    align-self: flex-end;
+    top: 10px;
+    right: 10px;
+  } */
+
+
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* Ende @media */
+
+@media screen and (max-height: 1500px) {
+  .footer-nav li:last-child {
+    /* margin-left: auto; */
+    position: fixed;
+    top: 90%;
+    right: 10px;
+    color: #333;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-logo {
+    display: block;
+    position: absolute;
+    left: 0;
+    padding: 2rem;
+    width: 35%;
+    height: auto;
+  }
+
+  .recht,
+  h1 {
+    margin-top: 30px;
+  }
+
+  .wrapper-recht {
+    margin: 250px auto;
+  }
+}
+
+/* Ende der Media Query */
